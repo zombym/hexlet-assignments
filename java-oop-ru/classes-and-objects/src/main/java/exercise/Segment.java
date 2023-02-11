@@ -19,7 +19,9 @@ package exercise;
     }
 
     public Point getMidPoint(){
-        return this.finish;
+        int cx = (start.getX() + finish.getX())/2;
+        int cy = (start.getY() + finish.getY())/2;
+        return new Point(cx, cy);
     }
 }
 // END
