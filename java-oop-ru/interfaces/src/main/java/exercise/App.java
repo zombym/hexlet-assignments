@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 // BEGIN
 class App{
     public static List<String> buildApartmentsList(List<Home> homeList, int n){
+        if(homeList.isEmpty()) {return new ArrayList<>();};
         Collections.sort(homeList, Comparator.comparing(Home::getArea));
         ArrayList<String> homes = new ArrayList<>();
         for(int i = 0 ; i < n; i++){
